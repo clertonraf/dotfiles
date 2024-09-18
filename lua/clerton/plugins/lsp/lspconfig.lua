@@ -92,6 +92,13 @@ return {
 			end,
 			["ruby_lsp"] = function()
 				lspconfig["ruby_lsp"].setup({
+					cmd = { "/Users/clertonra/.rbenv/shims/ruby-lsp" },
+					capabilities = capabilities,
+				})
+			end,
+			["standardrb"] = function()
+				lspconfig["standardrb"].setup({
+					cmd = { "/Users/clertonra/.rbenv/shims/standard", "--lsp" },
 					capabilities = capabilities,
 				})
 			end,
